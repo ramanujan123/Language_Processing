@@ -4,9 +4,12 @@
 %}
 
 %%
-"struct"|"if"|"else"|"switch"|"while"|"for"|"do"   { printf("'%s': keyword\n", yytext); }
-"int"|"double"|"float"|"char { printf("'%s': datatype\n", yytext); }
-"stack"|"queue"|"vector" { printf("'%s': datastructure\n", yytext); }
+"<iostream>" { printf("'<iostream>': HEADER\n"); }
+"<bits/stdc++.h>" { printf("'<bits/stdc++.h>': HEADER\n"); }
+#include { printf("'%s': INCLUDE\n", yytext); }
+struct|if|else|switch|while|for|do   { printf("'%s': keyword\n", yytext); }
+int|double|float|char { printf("'%s': datatype\n", yytext); }
+stack|queue|vector { printf("'%s': datastructure\n", yytext); }
 [_a-zA-Z][_a-zA-Z0-9]*    { printf("'%s': identifier\n", yytext); }
 [0-9]+    { printf("'%s': integer constant\n", yytext); }
 [0-9]+\.[0-9]+    { printf("'%s': float constant\n", yytext); }
