@@ -23,6 +23,9 @@ stack|queue|vector { printf("'%s': datastructure\n", yytext); }
 \/\/[^\n]*    { printf("'%s': comment\n", yytext); }
 \/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/    { printf("'%s': comment\n", yytext); }
 
+[a-zA-Z_][a-zA-Z0-9_]*\s*\([^)]*\)\s*\{   { printf("'%s': function declaration\n", yytext); }
+[a-zA-Z_][a-zA-Z0-9_]*\s*\([^)]*\)       { printf("'%s': function invocation\n", yytext); }
+
 [ \t\n]+   { /* Ignore whitespace */ }
 .          { /* Ignore other characters */ }	
 %%
@@ -32,3 +35,4 @@ int main() {
     yylex();
     return 0;
 }
+
