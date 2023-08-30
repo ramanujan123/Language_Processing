@@ -8,7 +8,7 @@ gcc lex.yy.c -o file_name -ll - used for compiling the lexer code
 
 ## Rules followed for creating the regular expressions
 
-if input string = "<iostream>" or "<bits/stdc++.h>" - Header
+if input string = "<iostream>" or "<bits/stdc++.h>" - Header<br/>
 if input string = struct|if|else|switch|while|for|do - Keywords
 if input string = int|double|float|char - dataType
 if input string = stack|queue|vector - dataStructure
