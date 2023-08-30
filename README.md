@@ -2,16 +2,16 @@
 
 ## Lex code to perform lexival analysis of c++
 
-lex cpp_lexical_analyzer.l - used for generating the lexer code
-gcc lex.yy.c -o file_name -ll - used for compiling the lexer code
-./file_name - for running the lexer compiled lexer code
+lex cpp_lexical_analyzer.l - used for generating the lexer code__
+gcc lex.yy.c -o file_name -ll - used for compiling the lexer code__
+./file_name - for running the lexer compiled lexer code__
 
 ## Rules followed for creating the regular expressions
 
-if input string = "<iostream>" or "<bits/stdc++.h>" - Header<br/>
-if input string = struct|if|else|switch|while|for|do - Keywords
-if input string = int|double|float|char - dataType
-if input string = stack|queue|vector - dataStructure
+if input string = "<iostream>" or "<bits/stdc++.h>" - Header__
+if input string = struct|if|else|switch|while|for|do - Keywords__
+if input string = int|double|float|char - dataType__
+if input string = stack|queue|vector - dataStructure__
 if the input string satisfies none of the above conditions but can be represeted in form of [_a-zA-Z][_a-zA-Z0-9]* then  will be **Identifier**
 if the input string can be represented in form of [0-9]+ then - Integer constant
 if the input sting satisfies [0-9]+\.[0-9]+ then - float constant
