@@ -1,0 +1,26 @@
+*****************************************************************************************README***********************************************************************************************************
+ --> This is the README file
+ 
+ --> It contains instructions on how to run the files present in this folder
+ 
+ --> This folder contains many files 
+ 	--> lexer.l file: This is the lexer file which generates tokens for a given piece of c++ code
+ 	--> parser.y file: This is the main parser file which is used for syntax analysis
+ 	--> my_parser: This is the executable file which can directly parser the code
+ 	--> There are 6 sample codes written in c++ which can be used for syntax analysis (5 correct codes + 1 incorrect code)
+ 	--> Apart from those mentioned above, there are three more files. These are intermediate files generated during the parsing of code
+ 	
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 	
+HOW TO DO SYNTAX ANALYSIS:
+
+1. run the command "flex lexer.l"
+2. run the command "yacc -d parser.y"
+3. run the command "gcc -o my_parser y.tab.c lex.yy.c"
+4. run the command "./my_parser < {FILE_NAME}" to do syntax analysis
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Note: If the code doesn't have any syntax error, parser will display the three-address code, otherwise display the line number in which there is error with some information about the error
+
+
